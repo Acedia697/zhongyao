@@ -1,0 +1,197 @@
+/*
+ * ========================================
+ * Reuse Styles - 可复用的样式文件
+ * ========================================
+ *
+ * 描述：从 service.html 中抽提的通用样式，用于在多个页面中复用
+ * 作者：开发团队
+ * 创建时间：2025年
+ *
+ * 使用方法：
+ * 1. 在 HTML 文件的 <head> 部分引入此文件：
+ *    <link href="assets/mycss/Reuse.css" rel="stylesheet" />
+ *
+ * 2. 确保在主样式文件 (style.css) 之后引入，以便正确覆盖样式
+ *
+ * 3. 引入顺序示例：
+ *    <link href="assets/sass/style.css" rel="stylesheet" />
+ *    <link href="assets/mycss/Reuse.css" rel="stylesheet" />
+ *
+ * 注意事项：
+ * - 所有样式都使用 PingFang SC 字体
+ * - 颜色使用 CSS 变量，支持 display-p3 色彩空间
+ * - 响应式设计友好
+ */
+
+/* ========================================
+   Header & Navigation Styles
+   ======================================== */
+
+/**
+ * 卡片标题容器
+ * 用途：包装主标题和副标题的容器
+ * 使用示例：
+ * <div class="cardtitle">
+ *   <h2 class="titleone">主标题</h2>
+ *   <p class="titletwo">副标题</p>
+ * </div>
+ */
+.cardtitle {
+  margin-bottom: 40px;  /* 与下方内容的间距 */
+  text-align: center;   /* 居中对齐 */
+}
+
+/**
+ * 主标题样式
+ * 使用示例：
+ * <h2 class="titleone">源远流长的经验道地哲学</h2>
+ */
+.titleone {
+  color: var(--text-icon-font-gy-190-primary, rgba(0, 0, 0, 0.90));
+  color: var(--text-icon-font-gy-190-primary, color(display-p3 0 0 0 / 0.90));
+
+  /* Display/Large */
+  font-family: "PingFang SC";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px; /* 112.5% */
+}
+
+/**
+ * 副标题样式
+ * 使用示例：
+ * <p class="titletwo">Decoding the Science Behind Regional Ecology</p>
+ */
+.titletwo {
+  color: var(--text-icon-font-gy-260-secondary, rgba(0, 0, 0, 0.60));
+  color: var(--text-icon-font-gy-260-secondary, color(display-p3 0 0 0 / 0.60));
+
+  /* Title/ExtraLarge */
+  font-family: "PingFang SC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+}
+
+/* ========================================
+   Footer Styles
+   ======================================== */
+
+/**
+ * Footer 服务链接文字样式
+ * 使用示例：
+ * <span class="wpo-service-link-widget-text">关于我们</span>
+ */
+.wpo-service-link-widget-text {
+  color: var(--text-icon-font-wh-255, rgba(255, 255, 255, 0.55));
+  color: var(--text-icon-font-wh-255, color(display-p3 1 1 1 / 0.55));
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 157% */
+}
+
+/* ========================================
+   Contact Form Styles
+   ======================================== */
+
+/**
+ * 服务联系区域容器
+ * 用途：包装联系表单的主容器
+ * 特点：白色背景，圆角，阴影效果
+ * 使用示例：
+ * <div class="wpo-service-contact-area">
+ *   <div class="wpo-contact-title">
+ *     <h2>Have project in mind? Let's discuss</h2>
+ *     <p>Get in touch with us to see how we can help you with your project</p>
+ *   </div>
+ *   <div class="wpo-contact-form-area">
+ *     <form>...</form>
+ *   </div>
+ * </div>
+ *
+ * 适用场景：
+ * - 服务页面的联系表单
+ * - 项目页面的咨询表单
+ * - 任何需要用户填写信息的表单区域
+ */
+.wpo-service-contact-area {
+  padding: 30px;
+  box-shadow: 0px 2px 8px 2px rgba(22, 14, 71, 0.1);
+  border-radius: 20px;
+  background: #fff;
+}
+
+/**
+ * 联系表单标题区域
+ * 用途：表单顶部的标题和描述文字
+ * 特点：底部间距30px
+ */
+.wpo-service-contact-area .wpo-contact-title {
+  margin-bottom: 30px;
+}
+
+/**
+ * 联系表单列容器
+ * 用途：表单字段的列布局
+ * 特点：每列底部间距30px
+ */
+.wpo-service-contact-area .wpo-contact-form-area .col {
+  margin-bottom: 30px;
+}
+
+/**
+ * 表单控件基础样式
+ * 用途：输入框、选择框的基础样式
+ * 特点：高度50px，无边框，只有底部边框，聚焦时无阴影
+ */
+.wpo-service-contact-area .wpo-contact-form-area .form-control {
+  height: 50px;
+  border: 0;
+  border-bottom: 1px solid #D9D9D9;
+  border-radius: 0;
+}
+
+.wpo-service-contact-area .wpo-contact-form-area .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/**
+ * 文本域样式
+ * 用途：多行文本输入框
+ * 特点：高度120px，适用于留言、备注等长文本输入
+ */
+.wpo-service-contact-area .wpo-contact-form-area textarea.form-control {
+  height: 120px;
+}
+
+/**
+ * 选择框样式
+ * 用途：下拉选择框
+ * 特点：自定义下拉箭头图标，背景透明
+ */
+.wpo-service-contact-area .wpo-contact-form-area select.form-control {
+  background: transparent url(../images/select-icon2.png) no-repeat calc(100% - 15px) center;
+}
+
+/**
+ * 提交区域样式
+ * 用途：包装提交按钮和加载器的容器
+ * 特点：居中对齐
+ */
+.wpo-service-contact-area .wpo-contact-form-area .submit-area {
+  text-align: center;
+}
+
+/**
+ * 提交按钮样式
+ * 用途：表单提交按钮
+ * 特点：圆角6px，与整体设计保持一致
+ */
+.wpo-service-contact-area .wpo-contact-form-area .submit-area button {
+  border-radius: 6px;
+}

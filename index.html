@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="wpOceans" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/images/favicon.png"
+    />
+    <title>世界道地中药峰会</title>
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.css" rel="stylesheet" />
+    <link href="assets/css/slick.css" rel="stylesheet" />
+    <link href="assets/css/slick-theme.css" rel="stylesheet" />
+    <link href="assets/css/swiper.min.css" rel="stylesheet" />
+    <link href="assets/css/nice-select.css" rel="stylesheet" />
+    <link href="assets/css/owl.transitions.css" rel="stylesheet" />
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet" />
+    <link href="assets/sass/style.css" rel="stylesheet" />
+    <style>
+      /* 峰会信息样式 */
+      .wpo-summit-info-text .summit-title {
+        margin-bottom: 40px;
+      }
+
+      .wpo-summit-info-text .summit-title h2 {
+        font-size: 48px;
+        font-weight: 600;
+        color: #222222;
+        margin-bottom: 10px;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .wpo-summit-info-text .summit-title .subtitle {
+        font-size: 16px;
+        color: #888888;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .summit-details {
+        margin-bottom: 40px;
+      }
+
+      .summit-item {
+        margin-bottom: 40px;
+      }
+
+      .summit-number {
+        width: 40px;
+        height: 40px;
+        background-color: #0056EA;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .summit-content .label {
+        display: block;
+        font-size: 14px;
+        color: #888888;
+        margin-bottom: 8px;
+        font-weight: 400;
+      }
+
+      .summit-content h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #222222;
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      .summit-btn {
+        background-color: #0056EA !important;
+        border-color: #0056EA !important;
+        color: white;
+        border-radius: 40px;
+      }
+
+      .summit-btn:hover {
+        background-color: #003db3 !important;
+        border-color: #003db3 !important;
+      }
+      .cardtitle {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .titleone {
+        font-size: 48px;
+        font-weight: 600;
+        color: #222222;
+        margin-bottom: 10px;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .titletwo {
+        font-size: 16px;
+        width: '100%';
+        height:auto;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        }
+      .wpo-blog-little-title {
+        color: var(--text-icon-font-gy-190-primary, rgba(0, 0, 0, 0.90));
+        color: var(--text-icon-font-gy-190-primary, color(display-p3 0 0 0 / 0.90));
+        text-align: center;
+
+        /* Headline/Large */
+        font-family: "PingFang SC";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px; /* 122.222% */
+      }
+
+      .wpo-blog-little-content {
+        color: var(--text-icon-font-gy-260-secondary, rgba(0, 0, 0, 0.60));
+color: var(--text-icon-font-gy-260-secondary, color(display-p3 0 0 0 / 0.60));
+text-align: center;
+
+/* Title/Medium */
+font-family: "PingFang SC";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+      }
+      .wpo-blog-blogimg{
+        height: 256px;
+        border-radius: 24px;
+background: url(<path-to-image>) lightgray 50% / cover no-repeat, #00C576;
+background: url(<path-to-image>) lightgray 50% / cover no-repeat, color(display-p3 0.3436 0.7619 0.4894);
+      }
+      .wpo-partners-area-img{
+        width: 80px;
+        height: 80px;
+        border-radius: '50%';
+/* background: url(<path-to-image>) lightgray 50% / cover repeat; */
+      }
+      .wpo-partners-area-text{
+        color: var(--text-icon-font-gy-190-primary, rgba(0, 0, 0, 0.90));
+color: var(--text-icon-font-gy-190-primary, color(display-p3 0 0 0 / 0.90));
+text-align: center;
+
+/* Title/ExtraLarge */
+font-family: "PingFang SC";
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 140% */
+      }
+      .wpo-news-image img {
+        width: 1120px;
+        height: 662px;
+        border-radius: 33px;
+        object-fit: cover;
+        margin-top:64px ;
+      }
+      .read-more-link {
+        color: var(--text-icon-font-gy-190-primary, rgba(0, 0, 0, 0.90));
+color: var(--text-icon-font-gy-190-primary, color(display-p3 0 0 0 / 0.90));
+
+/* Title/Large */
+font-family: "PingFang SC";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px; /* 144.444% */
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+      }
+      
+
+    
+
+      /* 响应式设计 */
+      @media (max-width: 767px) {
+        .wpo-summit-info-text .summit-title h2 {
+          font-size: 36px;
+        }
+
+        .summit-item {
+          margin-bottom: 35px;
+        }
+
+        .summit-number {
+          width: 35px;
+          height: 35px;
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+
+        .summit-content h3 {
+          font-size: 18px;
+        }
+
+        .summit-content .label {
+          margin-bottom: 6px;
+        }
+      }
+
+      /* 合作伙伴区域样式 */
+      .partners-section {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+        min-height: 400px;
+      }
+
+      .partners-section .grid {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .wpo-partners-area-img {
+        width: 80px;
+        height: 80px;
+        background-color: #20B2AA;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        object-fit: contain;
+        
+      }
+
+      .wpo-partners-area-text {
+        font-size: 16px;
+        font-weight: 500;
+        color: #222222;
+        margin: 0;
+        line-height: 1.4;
+        text-align: center;
+      }
+      .wpo-service-area-title{
+        color: var(--text-icon-font-gy-190-primary, rgba(0, 0, 0, 0.90));
+        color: var(--text-icon-font-gy-190-primary, color(display-p3 0 0 0 / 0.90));
+
+        /* Headline/Large */
+        font-family: "PingFang SC";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px; /* 122.222% */
+        padding: 34px 0px;
+      }
+      .wpo-service-link-widget-text{
+        color: var(--text-icon-font-wh-255, rgba(255, 255, 255, 0.55));
+        color: var(--text-icon-font-wh-255, color(display-p3 1 1 1 / 0.55));
+
+        /* Mark/Medium */
+        font-family: "PingFang SC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px; /* 157.143% */
+      }
+
+      /* 响应式设计 */
+      @media (max-width: 767px) {
+        .wpo-partners-area-img {
+          width: 70px;
+          height: 70px;
+          padding: 15px;
+        }
+
+        .wpo-partners-area-text {
+          font-size: 14px;
+        }
+      }
+
+      /* 首页专用 - 导航链接颜色为白色 */
+      .wpo-site-header #navbar > ul > li > a {
+        color: #fff !important;
+      }
+
+      .wpo-site-header #navbar > ul > li a {
+        color: #fff !important;
+      }
+
+      /* 首页专用 - Logo和品牌名称颜色为白色 */
+      .wpo-header-style-1 .navbar-header .logo {
+        color: white !important;
+      }
+
+      /* 首页专用 - 粘性导航背景为深灰色 */
+      .wpo-header-style-1 .navigation.sticky-header {
+        background: #222222 !important;
+      }
+
+      /* 首页专用 - Footer文字样式 */
+      .wpo-service-link-widget-text {
+        color: var(--text-icon-font-wh-255, rgba(255, 255, 255, 0.55));
+        color: var(--text-icon-font-wh-255, color(display-p3 1 1 1 / 0.55));
+        font-family: "PingFang SC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+      <!-- Start header -->
+      <header id="header">
+        <div class="wpo-site-header wpo-header-style-1">
+          <nav class="navigation navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <div class="row align-items-center">
+                <div class="col-lg-8 col-md-6 col-6">
+                  <div class="navbar-wrap">
+                    <div class="navbar-header">
+                      <img
+                        src="assets/images/世界道地中药峰会LOGO_svg 1.svg"
+                        alt=""
+                      />
+                      <a class="navbar-brand logo" href="index.html"
+                        >世界道地中药峰会</a
+                      >
+                    </div>
+                    <div
+                      id="navbar"
+                      class="collapse navbar-collapse navigation-holder"
+                    >
+                      <button class="menu-close">
+                        <i class="ti-close"></i>
+                      </button>
+                      <ul class="nav navbar-nav mb-2 mb-lg-0">
+                        <li class="menu-item-has-children">
+                          <a class="active" href="#">首页</a>
+                        </li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li class="menu-item-has-children">
+                          <a href="service.html">标准与理念</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                          <a href="project.html">生态公益</a>
+                       
+                        </li>
+                        <li class="menu-item-has-children">
+                          <a href="blog.html">合作与加入</a>
+                         
+                        </li>
+                        <li class="menu-item-has-children">
+                          <a href="#">新闻中心</a>
+                
+                        </li>
+                        <li><a href="contact.html">联系我们</a></li>
+                      </ul>
+                    </div>
+                    <!-- end of nav-collapse -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of container -->
+          </nav>
+        </div>
+      </header>
+      <!-- end of header -->
+      <!-- start of hero -->
+      <section class="wpo-hero-slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="slide-inner slide-bg-image"
+                data-background="assets/images/slider/slide-1.jpg"
+              >
+                <!-- <div class="gradient-overlay"></div> -->
+                <div class="container-fluid">
+                  <div class="slide-content">
+                    <div data-swiper-parallax="400" class="slide-title">
+                      <h2>纯净生态环境，源于自然的馈赠</h2>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div data-swiper-parallax="500" class="slide-btns">
+                      <ul>
+  
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end slide-inner -->
+            </div>
+            <!-- end swiper-slide -->
+
+            <div class="swiper-slide">
+              <div
+                class="slide-inner slide-bg-image"
+                data-background="assets/images/slider/slide-1.jpg"
+              >
+                <!-- <div class="gradient-overlay"></div> -->
+                <div class="container-fluid">
+                  <div class="slide-content">
+                    <div data-swiper-parallax="400" class="slide-title">
+                      <h2>纯净生态环境，源于自然的馈赠</h2>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div data-swiper-parallax="500" class="slide-btns">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end slide-inner -->
+            </div>
+            <!-- end swiper-slide -->
+
+            <div class="swiper-slide">
+              <div
+                class="slide-inner slide-bg-image"
+                data-background="assets/images/slider/slide-1.jpg"
+              >
+              
+                <div class="container-fluid">
+                  <div class="slide-content">
+                    <div data-swiper-parallax="300" class="slide-title">
+                      <h2>纯净生态环境，源于自然的馈赠</h2>
+                    </div>
+                    <div data-swiper-parallax="400" class="slide-text">
+                   
+                    </div>
+                    <div class="clearfix"></div>
+                    <div data-swiper-parallax="500" class="slide-btns">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end slide-inner -->
+            </div>
+            <!-- end swiper-slide -->
+          </div>
+          <!-- end swiper-wrapper -->
+          <!-- swipper controls -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- end of hero slider -->
+      <!-- start wpo-blog-section -->
+      <section class="wpo-blog-section section-padding" id="blog">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="card-title">
+              <h2 class="titleone">主要<span style="color: #005BFF;">方向</span></h2>
+              <p class="titletwo">Main direction</p>
+
+            </div>
+          </div>
+          <div class="wpo-blog-items">
+            <div class="row">
+              <div class="col col-lg-4 col-md-6 col-12">
+                <div class="wpo-blog-item">
+                  <div class="wpo-blog-img">
+                    <img class="wpo-blog-blogimg" src="assets/images/blog/img-1.jpg" alt="" />
+                    
+                  </div>
+                  <div class="wpo-blog-content">
+                    <h2 style="text-align: center;">
+                      <a href="blog-single.html" class="wpo-blog-little-title"
+                        >匠心高质量标准</a
+                      >
+                    </h2>
+                    <p class="wpo-blog-little-content">
+                      我们致力于建立一套完整、透明、可执行的道地中药全产业链标准体系，从种子到成品，每一步都精益求精，为全球消费者提供最安全、有效的产品
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-lg-4 col-md-6 col-12">
+                <div class="wpo-blog-item">
+                  <div class="wpo-blog-img">
+                    <img class="wpo-blog-blogimg"  src="assets/images/blog/img-2.jpg" alt="" />
+                  
+                  </div>
+                  <div class="wpo-blog-content">
+                    <h2 style="text-align: center;">
+                      <a href="blog-single.html" class="wpo-blog-little-title"
+                        >生态公益</a
+                      >
+                    </h2>
+                    <p class="wpo-blog-little-content">
+                      秉持“以药养地，以地育药”的理念，我们将商业价值与社会责任相结合，投身于沙漠治理与生物多样性保护，实现人与自然的和谐共生
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-lg-4 col-md-6 col-12">
+                <div class="wpo-blog-item">
+                  <div class="wpo-blog-img">
+                    <img class="wpo-blog-blogimg"  src="assets/images/blog/img-3.jpg" alt="" />
+                    
+                  </div>
+                  <div class="wpo-blog-content">
+                    <h2 style="text-align: center;">
+                      <a href="blog-single.html" class="wpo-blog-little-title"
+                        >全链条整合</a
+                      >
+                    </h2>
+                    <p class="wpo-blog-little-content">
+                      我们提供覆盖全产业链的一站式解决方案，将严苛标准注入从传统中药到衍生品（化妆品、保健品）及药食同源食品的每一个环节，与伙伴共同定义下一代健康产品
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end container -->
+      </section>
+      <!-- end wpo-blog-section -->
+      <!-- start of wpo-about-area -->
+      <div class="wpo-summit-info-area section-padding">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="cardtitle">
+              <h2 class="titleone">峰会核心信息</h2>
+              <p class="titletwo">Summit Highlights</p>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="wpo-summit-info-text">
+          
+
+                <div class="summit-details">
+                  <div class="summit-item">
+                    <div class="summit-number">01</div>
+                    <div class="summit-content">
+                      <span class="label">峰会名称</span>
+                      <h3>2025年度世界酒地中药峰会</h3>
+                    </div>
+                  </div>
+
+                  <div class="summit-item">
+                    <div class="summit-number">02</div>
+                    <div class="summit-content">
+                      <span class="label">峰会时间</span>
+                      <h3>拟定日期：2025年10月26-28日</h3>
+                    </div>
+                  </div>
+
+                  <div class="summit-item">
+                    <div class="summit-number">03</div>
+                    <div class="summit-content">
+                      <span class="label">峰会地点</span>
+                      <h3>日本东京国际论坛</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btns">
+                  <a href="#" class="theme-btn summit-btn" tabindex="0">探索会议</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="wpo-about-img">
+                <img src="assets/images/about.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of wpo-about-area -->
+      <!-- start of wpo-service-area -->
+      <div class="wpo-service-area">
+        <div class="container" >
+          <div class="row">
+            <div class="cardtitle">
+              <h2 class="titleone">新闻与动态</h2>
+              <p class="titletwo">News & Updates</p>
+            </div>
+          </div>
+          <div  class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <div class="wpo-news-image">
+                <img src="assets/images/service-single/1.jpg" alt="第一条新闻" />
+              </div>              
+              <div class="news-content">
+                <h3 class="wpo-service-area-title">峰会筹备工作顺利进行，首批演讲嘉宾名单确认</h3>
+                <a href="#" class="read-more-link">阅读更多</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <div class="wpo-news-image">
+                <img src="assets/images/service-single/2.jpg" alt="第二条新闻" />
+              </div>
+              <div class="news-content">
+                <h3 class="wpo-service-area-title">中药研究新进展，传统医学与现代科技结合</h3>
+                <a href="#" class="read-more-link">阅读更多</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of wpo-service-area -->
+
+     
+      <!-- wpo-partners-area-start -->
+      <section class="partners-section" style="margin-bottom: 80px;">
+        <h2 class="hidden">partner</h2>
+        <div class="container">
+          <div class="row">
+            <div class="cardtitle">
+              <h2 class="titleone">我们的合作伙伴</h2>
+              <p class="titletwo">Our Partner</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-xs-12 ">
+              <div  class="partner-grids partners-slider owl-carousel  clearfix">
+                <div class="grid">
+                  <div class="wpo-partners-area-img">
+                    <img style="width: 100%; height: 100%;border-radius: 50%;" src="assets/images/partners/img-1.jpg" alt="" />
+                  </div>
+                  <p class="wpo-partners-area-text">日中医学健康协会</p>
+                </div>
+                <div class="grid">
+                  <div class="wpo-partners-area-img">
+                    <img style="width: 100%; height: 100%;border-radius: 50%;" src="assets/images/partners/img-2.jpg" alt="" />
+                  </div>
+                  
+                  <p  class="wpo-partners-area-text">日中农林牧促进协会</p>
+                </div>
+                <div class="grid">
+                  <div class="wpo-partners-area-img">
+                    <img style="width: 100%; height: 100%;border-radius: 50%;" src="assets/images/partners/img-3.jpg" alt="" />
+                  </div>
+                  <p  class="wpo-partners-area-text">世界中医药学会联合会</p>
+                </div>
+                <div class="grid">
+                  <div class="wpo-partners-area-img">
+                    <img style="width: 100%; height: 100%;border-radius: 50%;" src="assets/images/partners/img-1.jpg" alt="" />
+                  </div>
+                  <p  class="wpo-partners-area-text">日中医学健康协会</p>
+                </div>
+                <div class="grid">
+                  <div class="wpo-partners-area-img">
+                    <img style="width: 100%; height: 100%;border-radius: 50%;" src="assets/images/partners/img-4.jpg" alt="" />
+                  </div>
+                  <p  class="wpo-partners-area-text">日中农林牧促进协会</p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end contianer -->
+      </section>
+      <!-- partners-area-end -->
+      
+     
+      <!-- start of wpo-site-footer-section -->
+      <footer class="wpo-site-footer">
+        <div class="wpo-upper-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="widget about-widget">
+                  <div class="logo widget-title">
+                    <a class="logo" href="index.html">
+                      <img
+                      src="assets/images/世界道地中药峰会LOGO_svg 1.svg"
+                      alt=""
+                    />
+                    </a>
+                    <span style="
+                    color: var(--text-icon-font-wh-190-anti, rgba(255, 255, 255, 0.90));
+                    color: var(--text-icon-font-wh-190-anti, color(display-p3 1 1 1 / 0.90));
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                 ">世界道地中药峰会</span>
+                  </div>
+          
+                </div>
+              </div>
+              <div class="col col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
+                <div class="widget wpo-service-link-widget">
+                  <div class="contact-ft">
+                    <ul>
+                      <li>
+                        <a href="project-single.html">
+                          <span class="wpo-service-link-widget-text">关于我们</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="project-single.html">
+                          <span class="wpo-service-link-widget-text">标准与理念</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
+                <div class="widget wpo-service-link-widget">
+                  <div class="contact-ft">
+                    <ul>
+                      <li>
+                        <a href="project-single.html">
+                          <span class="wpo-service-link-widget-text">生态公益</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="project-single.html">
+                          <span class="wpo-service-link-widget-text">新闻中心</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                <div class="widget wpo-service-link-widget">
+                  <div class="contact-ft">
+                    <ul>
+                      <li>
+                        <a href="project-single.html">
+                          <span class="wpo-service-link-widget-text">合作与加入</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="project-single.html">
+                          <span class="wpo-service-link-widget-text">联系我们</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                <div class="widget wpo-service-link-widget">
+                  <div class="contact-ft">
+                    <ul>
+                      <li>
+                        <a href="project-single.html">
+                          <span class="wpo-service-link-widget-text">收藏网页</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="project-single.html">
+                          <span class="wpo-service-link-widget-text">联系邮箱</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- end container -->
+        </div>
+        <div class="wpo-lower-footer">
+          <div class="container" style="text-align: center;">
+            <div class="row">
+                <ul>
+                  <li>
+                   <span class="wpo-service-link-widget-text" >
+                    &copy; 2025 世界道地中药高质量发展峰会组委会. 版权所有.  |  
+                    隐私政策  | 服务条款
+                   </span>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end of wpo-site-footer-section -->
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery.dlmenu.js"></script>
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <!-- Custom script for this template -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
