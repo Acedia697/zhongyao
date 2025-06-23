@@ -41,7 +41,7 @@
         flex-direction: column;
         z-index: 1;
       }
-      .nav{
+      .nav {
         flex-wrap: nowrap !important;
       }
     </style>
@@ -69,16 +69,25 @@
           <nav class="navigation navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
               <div class="row align-items-center">
-                <div class="col-lg-8 col-md-6 col-6">
+                <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+                  <div class="mobail-menu">
+                    <button type="button" class="navbar-toggler open-btn">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar first-angle"></span>
+                      <span class="icon-bar middle-angle"></span>
+                      <span class="icon-bar last-angle"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-9">
                   <div class="navbar-wrap">
                     <div class="navbar-header">
-                      <img
-                        src="assets/images//Standards//世界道地中药峰会LOGO_svg 1.svg"
-                        alt=""
-                      />
-                      <a class="navbar-brand logo" href="index.html">
-                        世界道地中药峰会
-                      </a>
+                      <a class="navbar-brand logo" href="index.html"
+                        ><img
+                        src="assets/images/世界道地中药峰会LOGO_blue.svg"
+                          alt=""
+                        />世界道地中药峰会</a
+                      >
                     </div>
                     <div
                       id="navbar"
@@ -88,22 +97,20 @@
                         <i class="ti-close"></i>
                       </button>
                       <ul class="nav navbar-nav mb-2 mb-lg-0">
-                        <li class="menu-item-has-children">
-                          <a href="index.html">首页</a>
-                        </li>
                         <li>
-                          <a href="about.html">关于我们</a>
+                            <a href="index.html">首页</a>
                         </li>
-                        <li class="menu-item-has-children">
+                        <li><a href="about.html">关于我们</a></li>
+                        <li>
                           <a href="service.html">标准与理念</a>
                         </li>
-                        <li class="menu-item-has-children">
+                        <li>
                           <a href="project.html">生态公益</a>
                         </li>
-                        <li class="menu-item-has-children">
+                        <li>
                           <a href="blog.html">合作与加入</a>
                         </li>
-                        <li class="menu-item-has-children">
+                        <li>
                           <a href="#">新闻中心</a>
                         </li>
                         <li>
