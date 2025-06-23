@@ -41,6 +41,65 @@
         flex-direction: column;
         z-index: 1;
       }
+      /* 引言区域 */
+      .wpo-foreword-area .container {
+        display: flex;
+        gap: 130px;
+      }
+      .wpo-foreword-area .foreword-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 50px;
+      }
+      /* 引言区域 - 左侧 */
+      .wpo-foreword-area .foreword-left .foreword-left-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .wpo-foreword-area .foreword-left .foreword-left-title h2 {
+        color: var(--text-icon-font-gy-190-primary, rgba(0, 0, 0, 0.9));
+        color: var(
+          --text-icon-font-gy-190-primary,
+          color(display-p3 0 0 0 / 0.9)
+        );
+
+        /* Display/Large */
+        font-family: "PingFang SC";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 72px; /* 112.5% */
+      }
+      .wpo-foreword-area .foreword-left .foreword-left-title img {
+        width: 60px;
+        height: 60px;
+        margin-left: 24px;
+      }
+      .wpo-foreword-area .foreword-left p {
+        color: var(--text-icon-font-gy-260-secondary, rgba(0, 0, 0, 0.60));
+        color: var(--text-icon-font-gy-260-secondary, color(display-p3 0 0 0 / 0.60));
+
+        /* Body 1 */
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 133.333% */
+        letter-spacing: -0.24px;
+      }
+
+      /* 引言区域 - 右侧图片 */
+      .wpo-foreword-area .foreword-right {
+        flex: 1;
+      }
+      .wpo-foreword-area .foreword-right img {
+        height: 400px;
+        width: 100%;
+        border-radius: 20px;
+      }
     </style>
   </head>
 
@@ -146,330 +205,26 @@
       </section>
       <!-- end page-title -->
 
-      <!-- start of wpo-about-area -->
-      <div class="wpo-about-area section-padding">
+      <!-- start of wpo-foreword-area -->
+      <div class="wpo-foreword-area section-padding">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12 colsm-12">
-              <div class="wpo-about-text">
-                <div class="wpo-about-title">
-                  <span class="sub">About Us</span>
-                  <h2>We’re More than a <span>Industrial</span> Company</h2>
-                </div>
-                <h5>
-                  Industry can dolor siot amet, constetur adiping elit. Commodo
-                  adipiscing erat aliquam mauris morbioliotion adipiscing
-                  vulputate. Hendrerit laoreet vivea sodales odio commodo
-                  vulputate nunc.
-                </h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Convallis scelerisque quam sit at. Enim leo, eget adipiscing
-                  sagittis nec. Facilisi suscipit mi suscipit pharetra penatibus
-                  sed integer at congue. Book senectus nibh placerat justo in
-                  ultricies. Nunc varius facilisis posuere consectetur mauris
-                  integer integer sed sollicitudin. Egestas tristique eget arcu
-                  mattis eros dictumst.
-                </p>
-                <p>
-                  Nunc varius facilisis posuere consectetur mauris integer
-                  integer sed sollicitudin. Egestas tristique eget arcu mattis
-                  eros dictumst
-                </p>
-              </div>
+          <div class="foreword-left">
+            <div class="foreword-left-title">
+              <h2>引言</h2>
+              <img src="assets/images/AboutUs/引号.svg" alt="" />
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-              <div class="wpo-about-img">
-                <img src="assets/images/about.jpg" alt="" />
-                <div class="wpo-about-item">
-                  <div class="wpo-about-top">
-                    <div class="wpo-about-thumb-img">
-                      <img src="assets/images/about2.jpg" alt="" />
-                    </div>
-                    <div class="wpo-about-info">
-                      <div class="wpo-about-info-text">
-                        <h2>Jenny Wilson</h2>
-                        <span>CEO of BudyBay</span>
-                      </div>
-                      <div class="wpo-about-info-ratting">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="wpo-about-content">
-                    <p>
-                      “Consectetur adipiscing elited quam quis aliquam putate
-                      duisquis. Molestie ma facilisis peltesque.”
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p>
+              “我们相信，源于自然、遵循‘温和调养’哲学的道地中药，将在全球老龄化和慢性病挑战中，为人类健康提供独特的东方智慧与解决方案。”</br>
+              对于亚洲发展：
+              “我们致力于整合亚洲各国的资源与技术优势，共同防治区域性流行疾病，推动区域健康共同体的建设。”
+            </p>
+          </div>
+          <div class="foreword-right">
+            <img src="assets/images/AboutUs/section1_1.jpg" alt="" />
           </div>
         </div>
       </div>
       <!-- end of wpo-about-area -->
-      <!-- start of wpo-service-area -->
-      <div class="wpo-service-area">
-        <div class="container">
-          <div class="row">
-            <div class="wpo-section-title">
-              <p>Our Services</p>
-              <h2>We Provide Best <span>Services</span></h2>
-            </div>
-          </div>
-          <div class="row align-items-center">
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="wpo-service-item">
-                <div class="icon">
-                  <i><img src="assets/images/icon/engineering.svg" alt="" /></i>
-                </div>
-                <h2>
-                  <a href="service-single.html">Mechanical Engineering</a>
-                </h2>
-                <p>
-                  consectetur adipising elit. Dolor felism lectus gravida uoit.
-                  Sempr malesuada arcu facilisis amet sodales ornare.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="wpo-service-item">
-                <div class="icon">
-                  <i
-                    ><img src="assets/images/icon/oil-refinery.svg" alt=""
-                  /></i>
-                </div>
-                <h2><a href="service-single.html">Petroleum Refinery</a></h2>
-                <p>
-                  consectetur adipising elit. Dolor felism lectus gravida uoit.
-                  Sempr malesuada arcu facilisis amet sodales ornare.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="wpo-service-item">
-                <div class="icon">
-                  <i><img src="assets/images/icon/turbo.svg" alt="" /></i>
-                </div>
-                <h2><a href="service-single.html">Power & Energy</a></h2>
-                <p>
-                  consectetur adipising elit. Dolor felism lectus gravida uoit.
-                  Sempr malesuada arcu facilisis amet sodales ornare.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="wpo-service-item">
-                <div class="icon">
-                  <i><img src="assets/images/icon/timing.svg" alt="" /></i>
-                </div>
-                <h2><a href="service-single.html">Electrical & Power</a></h2>
-                <p>
-                  consectetur adipising elit. Dolor felism lectus gravida uoit.
-                  Sempr malesuada arcu facilisis amet sodales ornare.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="wpo-service-item">
-                <div class="icon">
-                  <i
-                    ><img src="assets/images/icon/recycle-water.svg" alt=""
-                  /></i>
-                </div>
-                <h2><a href="service-single.html">Sanitary & Plumbing</a></h2>
-                <p>
-                  consectetur adipising elit. Dolor felism lectus gravida uoit.
-                  Sempr malesuada arcu facilisis amet sodales ornare.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-              <div class="wpo-service-item">
-                <div class="icon">
-                  <i><img src="assets/images/icon/excavator.svg" alt="" /></i>
-                </div>
-                <h2>
-                  <a href="service-single.html">Industrial Construction</a>
-                </h2>
-                <p>
-                  consectetur adipising elit. Dolor felism lectus gravida uoit.
-                  Sempr malesuada arcu facilisis amet sodales ornare.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end of wpo-service-area -->
-      <!-- start wpo-fun-fact-section -->
-      <section class="wpo-fun-fact-section-s2">
-        <div class="container">
-          <div class="row">
-            <div class="col col-xs-12">
-              <div class="wpo-fun-fact-grids clearfix">
-                <div class="grid">
-                  <div class="info">
-                    <h3><span class="odometer" data-count="25">00</span></h3>
-                    <p>Years Of Experience</p>
-                  </div>
-                </div>
-                <div class="grid">
-                  <div class="info">
-                    <h3><span class="odometer" data-count="32">00</span></h3>
-                    <p>Expert Specialist</p>
-                  </div>
-                </div>
-                <div class="grid">
-                  <div class="info">
-                    <h3><span class="odometer" data-count="321">00</span>+</h3>
-                    <p>Successful Project</p>
-                  </div>
-                </div>
-                <div class="grid">
-                  <div class="info">
-                    <h3><span class="odometer" data-count="210">00</span>+</h3>
-                    <p>Happy Customers</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end wpo-fun-fact-section -->
-
-      <!-- start wpo-team-section -->
-      <section class="wpo-team-section section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="wpo-section-title">
-              <p>Our Team</p>
-              <h2>Our Expert Team <span>Member</span></h2>
-            </div>
-          </div>
-          <div class="wpo-team-wrap">
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="wpo-team-item">
-                  <div class="wpo-team-img">
-                    <img src="assets/images/team/img-1.jpg" alt="" />
-                  </div>
-                  <div class="wpo-team-text">
-                    <h3><a href="team-single.html">Esther Howard</a></h3>
-                    <span>Creative Director</span>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="ti-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"> <i class="ti-twitter-alt"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"> <i class="ti-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-google"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="wpo-team-item">
-                  <div class="wpo-team-img">
-                    <img src="assets/images/team/img-2.jpg" alt="" />
-                  </div>
-                  <div class="wpo-team-text">
-                    <h3><a href="team-single.html">Jacob Jones</a></h3>
-                    <span>Head Marketer</span>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="ti-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"> <i class="ti-twitter-alt"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"> <i class="ti-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-google"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="wpo-team-item">
-                  <div class="wpo-team-img">
-                    <img src="assets/images/team/img-3.jpg" alt="" />
-                  </div>
-                  <div class="wpo-team-text">
-                    <h3><a href="team-single.html">Wade Warren</a></h3>
-                    <span>Stock Analist</span>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="ti-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"> <i class="ti-twitter-alt"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"> <i class="ti-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-google"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end container -->
-      </section>
-      <!-- end wpo-team-section -->
-      <!-- wpo-partners-area-start -->
-      <section class="partners-section section-padding pt-0">
-        <h2 class="hidden">partner</h2>
-        <div class="container">
-          <div class="row">
-            <div class="col col-xs-12">
-              <div class="partner-grids partners-slider owl-carousel clearfix">
-                <div class="grid">
-                  <img src="assets/images/partners/img-1.png" alt="" />
-                </div>
-                <div class="grid">
-                  <img src="assets/images/partners/img-2.png" alt="" />
-                </div>
-                <div class="grid">
-                  <img src="assets/images/partners/img-3.png" alt="" />
-                </div>
-                <div class="grid">
-                  <img src="assets/images/partners/img-4.png" alt="" />
-                </div>
-                <div class="grid">
-                  <img src="assets/images/partners/img-5.png" alt="" />
-                </div>
-                <div class="grid">
-                  <img src="assets/images/partners/img-6.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end contianer -->
-      </section>
-      <!-- partners-area-end -->
 
       <!-- start of wpo-site-footer-section -->
       <footer class="wpo-site-footer">
