@@ -246,6 +246,14 @@
         border-radius: 10px;
       }
 
+      /* 让图片完整显示在div中 */
+      .wpo-about-img > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* 保持图片比例，完整显示 */
+        border-radius: 10px;
+      }
+
 
       /* 峰会信息文本样式 */
       .wpo-summit-info-text .summit-content .title {
@@ -327,6 +335,7 @@
 
         .wpo-about-img img {
           max-height: 400px;
+          
         }
 
         .wpo-summit-info-text .standards-main-title {
