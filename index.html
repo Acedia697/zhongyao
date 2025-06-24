@@ -74,19 +74,29 @@
       }
 
       .summit-content .label {
-        display: block;
-        font-size: 14px;
-        color: #888888;
-        margin-bottom: 8px;
-        font-weight: 400;
+        color: var(--text-icon-font-gy-340-placeholder, rgba(0, 0, 0, 0.40));
+        color: var(--text-icon-font-gy-340-placeholder, color(display-p3 0 0 0 / 0.40));
+
+        /* Headline/Small */
+        font-family: "PingFang SC";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px; /* 133.333% */
+        margin: 12px 0;
+        display: inline-block;
       }
 
       .summit-content h3 {
-        font-size: 20px;
-        font-weight: 600;
-        color: #222222;
-        margin: 0;
-        line-height: 1.4;
+        color: var(--text-icon-font-gy-190-primary, rgba(0, 0, 0, 0.90));
+      color: var(--text-icon-font-gy-190-primary, color(display-p3 0 0 0 / 0.90));
+
+      /* Headline/Large */
+      font-family: "PingFang SC";
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 44px; /* 122.222% */
       }
 
       .summit-btn {
@@ -228,15 +238,20 @@ text-underline-position: from-font;
       }
 
       /* 合作伙伴区域样式 */
-      .partners-section {
-        background-color: #f8f9fa;
-        padding: 80px 0;
-        min-height: 400px;
+      .partner-grids {
+        
+        padding: 0 80px;
       }
 
       .partners-section .grid {
         text-align: center;
-        margin-bottom: 30px;
+        background-color: white;
+        display: flex;
+        padding: 8px 8px 24px 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        border-radius: 16px;
       }
 
       .wpo-partners-area-img {
@@ -588,7 +603,7 @@ text-underline-position: from-font;
                     <div class="summit-number">01</div>
                     <div class="summit-content">
                       <span class="label">峰会名称</span>
-                      <h3>2025年度世界酒地中药峰会</h3>
+                      <h3>2025年度世界道地中药峰会</h3>
                     </div>
                   </div>
 
@@ -615,8 +630,8 @@ text-underline-position: from-font;
               </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
-              <div class="wpo-about-img">
-                <img src="assets/images/about.jpg" alt="" />
+              <div style="border-radius: 32px;overflow: hidden;">
+                <img  src="assets/images/about.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -662,8 +677,7 @@ text-underline-position: from-font;
      
       <!-- wpo-partners-area-start -->
       <section class="partners-section" style="margin-bottom: 80px;">
-        <h2 class="hidden">partner</h2>
-        <div class="container">
+        <div class="container section-padding" style="background-color: #F2F3FF;">
           <div class="row">
             <div class="cardtitle">
               <h2 class="titleone">我们的合作伙伴</h2>
