@@ -195,3 +195,146 @@
 .wpo-service-contact-area .wpo-contact-form-area .submit-area button {
   border-radius: 6px;
 }
+
+/**
+ * 导航栏宽度充分利用修复
+ * 用途：解决导航内容被压缩但右侧有剩余空间的问题
+ * 问题：导航菜单项挤在一起，但容器右侧还有空白空间未被利用
+ * 解决：让导航栏充分利用容器的全部可用宽度
+ */
+
+/* 桌面端导航栏宽度优化 */
+@media (min-width: 992px) {
+  /* 确保导航容器充分利用空间 */
+  .wpo-site-header .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* 导航栏行布局优化 */
+  .wpo-site-header .container-fluid .row {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 导航内容区域充分利用空间 */
+  .wpo-site-header .col-lg-9 {
+    flex: 1 1 auto;
+    max-width: none;
+    width: auto;
+  }
+
+  /* 导航包装器充分利用空间 */
+  .wpo-site-header .navbar-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* 导航菜单容器充分利用空间 */
+  .wpo-site-header .navigation-holder {
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* 菜单居中分布 */
+  }
+
+  /* 导航菜单列表充分展开 */
+  .wpo-site-header #navbar > ul.navbar-nav {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-evenly; /* 菜单项均匀分布 */
+    align-items: center;
+    margin: 0;
+    flex-wrap: nowrap; /* 防止换行 */
+  }
+
+  /* 导航菜单项自适应宽度 */
+  .wpo-site-header #navbar > ul.navbar-nav > li {
+    flex: 1 1 auto;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* 导航链接充分利用空间 */
+  .wpo-site-header #navbar > ul.navbar-nav > li > a {
+    display: block;
+    padding: 20px 10px; /* 增加上下内边距，从15px改为20px */
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 导航栏整体高度增加 */
+  .wpo-site-header .navigation {
+    min-height: 85px; /* 设置最小高度 */
+  }
+
+  /* 导航包装器高度调整 */
+  .wpo-site-header .navbar-wrap {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 品牌区域高度调整 */
+  .wpo-site-header .navbar-header {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 导航菜单容器高度调整 */
+  .wpo-site-header .navigation-holder {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* 中等屏幕优化 */
+@media (max-width: 991px) and (min-width: 768px) {
+  .wpo-site-header .container-fluid {
+    width: 100% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .wpo-site-header .navbar-wrap {
+    width: 100%;
+  }
+
+  .wpo-site-header .navbar-brand {
+    font-size: 16px;
+  }
+}
+
+/* 小屏幕下的移动端优化 */
+@media (max-width: 767px) {
+  .wpo-site-header .container-fluid {
+    width: 100% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .wpo-site-header .navbar-brand {
+    font-size: 14px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .wpo-site-header .navbar-brand img {
+    max-height: 28px;
+    width: auto;
+  }
+}
+/* 导航栏不换行 */
+.nav {
+  flex-wrap: nowrap !important;
+}
