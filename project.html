@@ -204,7 +204,7 @@
       .wpo-blog-section .sectionone_title {
         display: flex;
         align-items: center;
-        margin: 24px 0;
+        margin: 0 0 24px 0; /* 调整margin，因为现在在sectionone_left内部 */
       }
 
       .wpo-blog-section .sectionone_title img {
@@ -224,22 +224,23 @@
       .wpo-blog-section .sectionone_content {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; /* 保持垂直居中 */
+        gap: 80px; /* 增加间距 */
       }
 
-      .wpo-blog-section .sectionone_content img {
-        display: flex;
-        height: 440px;
+      .wpo-blog-section .sectionone_content > img {
+        flex: 1; /* 占用一半空间 */
+        height: 440px !important;
         border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        flex: 1 0 0;
+        object-fit: cover; /* 确保图片填充 */
       }
 
       /* ===== Section One Left - 左侧内容区域 ===== */
       .wpo-blog-section .sectionone_left {
-        flex: 1;
-        margin-right: 24px;
+        flex: 1; /* 占用一半空间 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 垂直居中内容 */
       }
 
       .wpo-blog-section .sectionone_left h4 {
@@ -262,40 +263,135 @@
       .wpo-blog-section .sectionone_left .section_bottom {
         display: flex;
         justify-content: space-between;
-        gap: 30px;
-        height: 230px;
-      }
-
-      /* ===== Section One Card - 单个卡片 ===== */
-
-      .wpo-blog-section .sectionone_left .sectionone_card {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
+        width: 100%;
         height: 100%;
       }
 
-      .wpo-blog-section .sectionone_left .sectionone_card img {
-        width: 100%;
-        height: 180px;
-        border-radius: 10px 10px 0 0; /* 只设置左上和右上圆角 */
-        object-fit: cover;
-        flex-shrink: 0;
-      }
-
-      .wpo-blog-section .sectionone_left .sectionone_card .card_content {
+      /* ===== Section One Card - 单个卡片 ===== */
+      .wpo-blog-section .section_bottom .sectionone_card {
         flex: 1;
-        padding: 20px;
-        border-radius: 0 0 10px 10px;
-        background: rgba(255, 255, 255, 0.7);
+        border-radius: 24px;
+        overflow: hidden;
       }
 
-      .wpo-blog-section .sectionone_left .sectionone_card .span {
-        color: var(--text-icon-font-gy-260-secondary, rgba(0, 0, 0, 0.6));
-        font-family: "PingFang SC";
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 20px;
+      .wpo-blog-section .section_bottom .sectionone_card img {
+        width: 100%;
+        height: 136px;
+        object-fit: cover;
+        margin: 0 auto;
+      }
+      /* 基础容器样式 */
+      .section_bottom {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        padding: 0 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 20px;
+      }
+
+      /* 卡片容器 - 解决图片尺寸不一致问题 */
+      .sectionone_card {
+        width: calc(50% - 20px);
+        min-width: 300px;
+        margin-bottom: 20px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sectionone_card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      /* 图片容器 - 统一高度 */
+      .sectionone_card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      /* 内容区域 */
+      .card_content {
+        padding: 20px;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .card_content span {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      /* 响应式调整 */
+      @media (max-width: 1024px) {
+        .sectionone_card {
+          width: calc(50% - 10px);
+        }
+
+        .sectionone_card img {
+          height: 200px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section_bottom {
+          /* padding: 30px 15px; */
+        }
+
+        .sectionone_card {
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto 20px;
+        }
+
+        .sectionone_card img {
+          height: 220px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .sectionone_card {
+          min-width: 280px;
+        }
+        .section_bottom {
+          flex-wrap: wrap;
+        }
+
+        .sectionone_card img {
+          height: 180px;
+        }
+
+        .card_content {
+          padding: 15px;
+        }
+
+        .title {
+          font-size: 16px;
+        }
+
+        .card_content span {
+          font-size: 13px;
+        }
       }
 
       /* ===== Section Four & Five - 就地保护和迁地保护 ===== */
@@ -438,24 +534,26 @@
         font-weight: 600;
       }
 
-      /* ===== Section Two - 核心原因 ===== */
+      /* ===== Section Three - 基因宝库 ===== */
       .wpo-blog-section .sectionthree {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; /* 改为垂直居中对齐 */
         margin: 50px 0;
-        gap: 80px;
+        gap: 60px;
       }
 
-      .wpo-blog-section .sectionthree img {
-        flex: 1;
-        height: 907px;
+      .wpo-blog-section .sectionthree > img {
+        flex: 0 0 45%; /* 左侧图片占45%宽度，不收缩 */
+        height: 600px; /* 减少高度 */
         border-radius: 20px;
-        width: 700px;
+        object-fit: cover;
+        max-width: 500px; /* 限制最大宽度 */
       }
 
       .wpo-blog-section .sectionthree-right {
-        flex: 1;
+        flex: 1; /* 右侧内容占剩余空间 */
+        min-width: 0; /* 允许收缩 */
       }
       .wpo-blog-section .sectionthree-right .sectionthree-right-card {
         display: flex;
@@ -501,12 +599,114 @@
       }
 
       /* ===== 响应式适配 ===== */
-      @media (max-width: 768px) {
+
+      /* 平板端响应式 (768px - 991px) */
+      @media (max-width: 991px) and (min-width: 768px) {
+        .wpo-blog-section .sectionone_content {
+          gap: 20px;
+        }
+
+        .wpo-blog-section .sectionone_content > img {
+          flex: 1; /* 平板端也保持平分宽度 */
+          height: 350px !important;
+        }
+
+        .wpo-blog-section .sectionone_title h3 {
+          font-size: 32px;
+          line-height: 40px;
+        }
+
+        .wpo-blog-section .sectionone_left h4 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
         .wpo-blog-section .sectionone_left .sectionone_card img {
+          height: 140px;
+        }
+
+        /* Section Three 平板端适配 */
+        .wpo-blog-section .sectionthree {
+          gap: 40px;
+        }
+
+        .wpo-blog-section .sectionthree > img {
+          flex: 0 0 40%; /* 平板端图片占40%宽度 */
+          height: 450px;
+          max-width: 400px;
+        }
+
+        .wpo-blog-section .sectionthree-right .sectionthree-right-card img {
+          width: 120px;
           height: 120px;
         }
 
-        /* Section Two 移动端适配 - 平板 */
+        .wpo-blog-section .sectionthree-right .sectionthree-right-card {
+          gap: 15px;
+        }
+      }
+
+      /* 移动端响应式 (≤767px) */
+      @media (max-width: 767px) {
+        /* Section One 移动端布局 */
+        .wpo-blog-section .sectionone_content {
+          flex-direction: column;
+          gap: 25px;
+        }
+
+        .wpo-blog-section .sectionone_left {
+          margin-right: 0;
+          /* order: 2; 文字内容在下方 */
+        }
+
+        .wpo-blog-section .sectionone_content > img {
+          order: 2; /* 图片在下方 */
+          height: 250px !important;
+          width: 100% !important;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        .wpo-blog-section .sectionone_left {
+          order: 1; /* 左侧内容在上方 */
+        }
+
+        .wpo-blog-section .sectionone_title {
+          margin-bottom: 20px;
+        }
+
+        .wpo-blog-section .sectionone_title h3 {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        /* 修复卡片容器布局 */
+        .wpo-blog-section .sectionone_left .section_bottom {
+          flex-direction: column; /* 移动端改为垂直布局 */
+          flex-wrap: nowrap; /* 禁止换行 */
+          gap: 20px;
+        }
+
+        .wpo-blog-section .section_bottom .sectionone_card {
+          width: 100%;
+          max-width: none; /* 移除最大宽度限制 */
+          margin: 0 0 20px 0; /* 调整间距 */
+        }
+
+        .wpo-blog-section .sectionone_left h4 {
+          font-size: 20px;
+          line-height: 28px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .wpo-blog-section .sectionone_left .title {
+          font-size: 12px;
+        }
+
+        /* 野生人参和冬虫夏草卡片样式已移除，等待重新编写 */
+
+        /* Section Two 移动端适配 */
         .wpo-blog-section .sectiontwo .sectiontwo-container {
           flex-direction: column;
           gap: 32px;
@@ -516,13 +716,145 @@
           height: 200px;
         }
 
-        /* Section Four & Five 移动端适配 - 平板 */
+        /* Section Four & Five 移动端适配 */
         .wpo-blog-section .sectionfour > div,
         .wpo-blog-section .sectionfive > div {
           flex-direction: column;
           gap: 24px;
         }
 
+        /* Section Three 移动端适配 */
+        .wpo-blog-section .sectionthree {
+          flex-direction: column;
+          gap: 30px;
+          align-items: center;
+        }
+
+        .wpo-blog-section .sectionthree > img {
+          flex: none; /* 移除flex设置 */
+          width: 100%;
+          height: 300px;
+          max-width: 400px;
+          object-fit: cover;
+        }
+
+        .wpo-blog-section .sectionthree-right {
+          width: 100%;
+        }
+
+        .wpo-blog-section .sectionthree-right .main_title {
+          text-align: center;
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+
+        .wpo-blog-section .sectionthree-right p {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .wpo-blog-section .sectionthree-right .sectionthree-right-card {
+          flex-direction: column;
+          text-align: center;
+          gap: 15px;
+          margin-bottom: 20px;
+        }
+
+        .wpo-blog-section .sectionthree-right .sectionthree-right-card img {
+          width: 100%;
+          height: 180px;
+          max-width: 250px;
+          margin: 0 auto;
+        }
+
+        .wpo-blog-section
+          .sectionthree-right
+          .sectionthree-right-card-content
+          h5 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        .wpo-blog-section
+          .sectionthree-right
+          .sectionthree-right-card-content
+          span {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+
+      /* 超小屏幕响应式 (≤480px) */
+      @media (max-width: 480px) {
+        .wpo-blog-section .sectionone_content {
+          gap: 20px;
+        }
+
+        .wpo-blog-section .sectionone_content > img {
+          height: 200px !important;
+          width: 100% !important;
+          max-width: 350px;
+        }
+
+        .wpo-blog-section .sectionone_left h4 {
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        .wpo-blog-section .sectionone_left .title {
+          font-size: 11px;
+        }
+
+        .wpo-blog-section .sectionone_title h3 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        /* 野生人参和冬虫夏草卡片超小屏样式已移除，等待重新编写 */
+
+        /* Section Three 超小屏幕适配 */
+        .wpo-blog-section .sectionthree {
+          gap: 20px;
+        }
+
+        .wpo-blog-section .sectionthree > img {
+          height: 250px;
+          max-width: 350px;
+        }
+
+        .wpo-blog-section .sectionthree-right .main_title {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        .wpo-blog-section .sectionthree-right .sectionthree-right-card img {
+          height: 150px;
+          max-width: 220px;
+        }
+
+        .wpo-blog-section .sectionthree-right .sectionthree-right-card {
+          gap: 12px;
+          margin-bottom: 15px;
+        }
+
+        .wpo-blog-section
+          .sectionthree-right
+          .sectionthree-right-card-content
+          h5 {
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        .wpo-blog-section
+          .sectionthree-right
+          .sectionthree-right-card-content
+          span {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      @media (max-width: 768px) {
         .wpo-blog-section .sectionfour img,
         .wpo-blog-section .sectionfive img {
           height: 180px;
@@ -789,15 +1121,15 @@
           <div class="container">
             <h2 class="main_title">紧迫——沉默的消逝</h2>
             <div class="sectionone">
-              <div class="sectionone_title">
-                <img
-                  src="assets/images/Eco_Charity/世界自然保护联盟logo.svg"
-                  alt=""
-                />
-                <h3>世界自然保护联盟</h3>
-              </div>
               <div class="sectionone_content">
                 <div class="sectionone_left">
+                  <div class="sectionone_title">
+                    <img
+                      src="assets/images/Eco_Charity/世界自然保护联盟logo.svg"
+                      alt=""
+                    />
+                    <h3>世界自然保护联盟</h3>
+                  </div>
                   <h4>
                     根据世界自然保护联盟（IUCN）红色名录及中国《国家重点保护野生植物名录》，超过百种传统药用植物正面临生存威胁
                   </h4>

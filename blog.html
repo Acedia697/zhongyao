@@ -42,6 +42,342 @@
         flex-direction: column;
         z-index: 1;
       }
+
+      /* ===== 联系表单响应式处理 ===== */
+      .wpo-contact-form-area {
+        padding: 30px;
+      }
+
+      .wpo-contact-form-area .row {
+        margin: 0 -15px;
+      }
+
+      .wpo-contact-form-area .col {
+        padding: 0 15px;
+        margin-bottom: 25px;
+      }
+
+      .wpo-contact-form-area .form-control {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      .wpo-contact-form-area .form-control:focus {
+        outline: none;
+        border-color: #0056ea;
+        box-shadow: 0 0 0 2px rgba(0, 86, 234, 0.1);
+      }
+
+      .wpo-contact-form-area textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .wpo-contact-form-area select.form-control {
+        background: white url(../images/select-icon.png) no-repeat
+          calc(100% - 15px) center;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      .wpo-contact-form-area .submit-area {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .wpo-contact-form-area .theme-btn-s4 {
+        padding: 15px 40px;
+        font-size: 16px;
+        border-radius: 6px;
+        min-width: 160px;
+      }
+
+      /* 平板端响应式 (768px - 991px) */
+      @media (max-width: 991px) and (min-width: 768px) {
+        .wpo-contact-form-area {
+          padding: 25px;
+        }
+
+        .wpo-contact-form-area .form-control {
+          padding: 12px;
+          font-size: 15px;
+        }
+
+        .wpo-contact-form-area .col {
+          margin-bottom: 20px;
+        }
+      }
+
+      /* 移动端响应式 (≤767px) */
+      @media (max-width: 767px) {
+        .wpo-contact-form-area {
+          padding: 20px 15px;
+        }
+
+        .wpo-contact-form-area .row {
+          margin: 0 -10px;
+        }
+
+        .wpo-contact-form-area .col {
+          padding: 0 10px;
+          margin-bottom: 20px;
+        }
+
+        /* 移动端所有输入框全宽 */
+        .wpo-contact-form-area .col-lg-6 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .wpo-contact-form-area .form-control {
+          padding: 12px 15px;
+          font-size: 16px; /* 防止iOS缩放 */
+        }
+
+        .wpo-contact-form-area textarea.form-control {
+          min-height: 100px;
+        }
+
+        .wpo-contact-form-area .submit-area {
+          margin-top: 25px;
+        }
+
+        .wpo-contact-form-area .theme-btn-s4 {
+          width: 100%;
+          padding: 15px;
+          font-size: 16px;
+        }
+      }
+
+      /* 超小屏幕响应式 (≤480px) */
+      @media (max-width: 480px) {
+        .wpo-contact-form-area {
+          padding: 15px 10px;
+        }
+
+        .wpo-contact-form-area .row {
+          margin: 0 -5px;
+        }
+
+        .wpo-contact-form-area .col {
+          padding: 0 5px;
+          margin-bottom: 15px;
+        }
+
+        .wpo-contact-form-area .form-control {
+          padding: 10px 12px;
+          font-size: 16px;
+        }
+
+        .wpo-contact-form-area textarea.form-control {
+          min-height: 80px;
+        }
+
+        .wpo-contact-form-area .submit-area {
+          margin-top: 20px;
+        }
+
+        .wpo-contact-form-area .theme-btn-s4 {
+          padding: 12px;
+          font-size: 15px;
+        }
+      }
+
+      /* 错误和成功消息响应式 */
+      @media (max-width: 767px) {
+        .wpo-contact-form-area .error-handling-messages {
+          margin-top: 20px;
+        }
+
+        .wpo-contact-form-area #success,
+        .wpo-contact-form-area #error {
+          font-size: 14px;
+          padding: 10px;
+          border-radius: 4px;
+        }
+      }
+
+      /* ===== 加入我们流程区域响应式 ===== */
+      .wpo-join-us-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin: 40px 0;
+      }
+
+      .wpo-join-us-item {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .wpo-join-us-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .wpo-join-us-item img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        object-fit: contain;
+      }
+
+      .join-us-title {
+        margin-bottom: 15px;
+      }
+
+      .join-us-title span {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: #0056ea;
+        color: white;
+        border-radius: 50%;
+        line-height: 32px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .join-us-title h6 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #222;
+        margin: 8px 0;
+      }
+
+      .join-us-line {
+        width: 40px;
+        height: 2px;
+        background: #0056ea;
+        margin: 10px auto;
+      }
+
+      .wpo-join-us-item p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* 平板端响应式 (768px - 991px) */
+      @media (max-width: 991px) and (min-width: 768px) {
+        .wpo-join-us-container {
+          gap: 20px;
+        }
+
+        .wpo-join-us-item {
+          padding: 18px;
+        }
+
+        .wpo-join-us-item img {
+          width: 70px;
+          height: 70px;
+          margin-bottom: 15px;
+        }
+
+        .join-us-title h6 {
+          font-size: 16px;
+        }
+
+        .wpo-join-us-item p {
+          font-size: 13px;
+        }
+      }
+
+      /* 移动端响应式 (≤767px) */
+      @media (max-width: 767px) {
+        .wpo-join-us-container {
+          flex-direction: column;
+          gap: 20px;
+          margin: 30px 0;
+        }
+
+        .wpo-join-us-item {
+          padding: 25px 20px;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        .wpo-join-us-item img {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 15px;
+        }
+
+        .join-us-title span {
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
+          font-size: 14px;
+        }
+
+        .join-us-title h6 {
+          font-size: 16px;
+          margin: 6px 0;
+        }
+
+        .join-us-line {
+          width: 30px;
+          margin: 8px auto;
+        }
+
+        .wpo-join-us-item p {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+
+      /* 超小屏幕响应式 (≤480px) */
+      @media (max-width: 480px) {
+        .wpo-join-us-container {
+          gap: 15px;
+          margin: 25px 0;
+        }
+
+        .wpo-join-us-item {
+          padding: 20px 15px;
+          max-width: 350px;
+        }
+
+        .wpo-join-us-item img {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 12px;
+        }
+
+        .join-us-title span {
+          width: 26px;
+          height: 26px;
+          line-height: 26px;
+          font-size: 13px;
+        }
+
+        .join-us-title h6 {
+          font-size: 15px;
+          margin: 5px 0;
+        }
+
+        .join-us-line {
+          width: 25px;
+          margin: 6px auto;
+        }
+
+        .wpo-join-us-item p {
+          font-size: 13px;
+          line-height: 1.4;
+        }
+      }
       .wpo-cooperation-card {
         width: 100%;
         display: flex;
