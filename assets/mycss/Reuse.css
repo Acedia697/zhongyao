@@ -37,7 +37,7 @@
  * </div>
  */
 .cardtitle {
-  margin-bottom: 40px;  /* 与下方内容的间距 */
+  margin-bottom: 64px;  /* 与下方内容的间距 */
   text-align: center;   /* 居中对齐 */
 }
 
@@ -73,6 +73,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 28px; /* 140% */
+  
 }
 
 /* ========================================

@@ -43,28 +43,6 @@
         z-index: 1;
       }
 
-      /* ===== 卡片标题组件 ===== */
-      .cardtitle {
-        margin-bottom: 40px;
-        text-align: center;
-      }
-
-      .cardtitle .titleone {
-        color: var(--text-icon-font-gy-190-primary, rgba(0, 0, 0, 0.9));
-        font-family: "PingFang SC";
-        font-size: 64px;
-        font-weight: 600;
-        line-height: 72px;
-      }
-
-      .cardtitle .titletwo {
-        color: var(--text-icon-font-gy-260-secondary, rgba(0, 0, 0, 0.6));
-        font-family: Poppins;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 32px;
-      }
-
       /* ===== 生态修复区域 - 博客项目容器 ===== */
       .wpo-blog-item-first {
         background: url(assets/images/Eco_Charity/section1_1.jpg) no-repeat
@@ -198,7 +176,7 @@
 
       /* ===== Section One - 紧迫沉默的消逝 ===== */
       .wpo-blog-section .sectionone {
-        margin: 50px 0;
+        margin-top: 64px;
       }
 
       .wpo-blog-section .sectionone_title {
@@ -400,7 +378,7 @@
         display: flex;
         justify-content: space-between;
         gap: 30px;
-        margin: 24px 0;
+        margin: 39px 0;
       }
 
       .wpo-blog-section .sectionfour > div > div,
@@ -472,7 +450,7 @@
         background-color: #000000;
         /* opacity: 0.1; */
       }
-      .wpo-blog-section p {
+      .wpo-blog-section .sectionfive p {
         color: var(--text-icon-font-gy-260-secondary, rgba(0, 0, 0, 0.6));
         color: var(
           --text-icon-font-gy-260-secondary,
@@ -485,11 +463,13 @@
         font-style: normal;
         font-weight: 400;
         line-height: 24px; /* 150% */
-        padding-left: 30px;
         text-align: left;
       }
 
       /* ===== Section Two - 核心原因 ===== */
+      .wpo-blog-section .sectiontwo {
+        padding-top: 48px;
+      }
       .wpo-blog-section .sectiontwo .sectiontwo-container {
         margin: 50px 0;
         display: flex;
@@ -539,8 +519,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center; /* 改为垂直居中对齐 */
-        margin: 50px 0;
+        margin: 128px 0;
         gap: 60px;
+      }
+
+      .wpo-blog-section .sectionthree p {
+        color: var(--text-icon-font-gy-340-placeholder, rgba(0, 0, 0, 0.4));
+        color: var(
+          --text-icon-font-gy-340-placeholder,
+          color(display-p3 0 0 0 / 0.4)
+        );
+
+        /* Headline/Small */
+        font-family: "PingFang SC";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px; /* 133.333% */
       }
 
       .wpo-blog-section .sectionthree > img {
@@ -703,8 +698,6 @@
         .wpo-blog-section .sectionone_left .title {
           font-size: 12px;
         }
-
-        /* 野生人参和冬虫夏草卡片样式已移除，等待重新编写 */
 
         /* Section Two 移动端适配 */
         .wpo-blog-section .sectiontwo .sectiontwo-container {
@@ -1109,7 +1102,10 @@
       <!-- end of wpo-project-area -->
 
       <!-- start of wpo-future-medical -->
-      <section class="wpo-blog-section section-padding">
+      <section
+        class="wpo-blog-section section-padding"
+        style="padding-bottom: 48px"
+      >
         <div class="container">
           <div class="cardtitle">
             <h2 class="titleone">为未来医学守护一个“诺亚方舟”</h2>
@@ -1184,7 +1180,7 @@
                 <img src="assets/images/Eco_Charity/section2_3.jpg" alt="" />
               </div>
             </div>
-            <div class="sectiontwo" style="padding: 48px 0">
+            <div class="sectiontwo">
               <h3>核心原因</h3>
               <div class="sectiontwo-container">
                 <div class="sectiontwo-item">
@@ -1235,7 +1231,7 @@
                 </div>
               </div>
             </div>
-            <h2 class="main_title" style="margin-bottom: 48px">
+            <h2 class="main_title" style="margin-bottom: 64px">
               建立“道地药材种质资源保护体系”
             </h2>
             <div class="sectionfour">
